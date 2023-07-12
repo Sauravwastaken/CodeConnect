@@ -1138,6 +1138,14 @@
       hamburger.addEventListener("click", () => {
         navfunction();
       });
+      Array.from(navLinks.children).forEach(element => {
+        element.addEventListener("click",()=>{
+          setTimeout(() => {
+            
+            navfunction();
+          }, 100);
+        })
+      });
 
       function navfunction() {
         navLinks.classList.toggle("nav_links_css");
